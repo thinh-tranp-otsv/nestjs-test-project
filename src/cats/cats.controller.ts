@@ -28,14 +28,14 @@ export class CatsController {
 
   @Get(':id')
   findOne(@Param('id') id: number) {
-    console.log(typeof id);
+    // console.log(typeof id);
     return this.catsService.findOne('' + id);
   }
 
   @Post()
   // @HttpCode(HttpStatus.GONE)
   create(@Body() createCatDto: CreateCatDto) {
-    console.log(createCatDto instanceof CreateCatDto);
+    // console.log(createCatDto instanceof CreateCatDto);
     return this.catsService.create(createCatDto);
   }
 
